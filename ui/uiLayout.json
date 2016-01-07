@@ -1,0 +1,6 @@
+
+{ "element": "window",  "subElements": [
+    {"element": "toolBar",  "source": "toolBar.json"},
+    {"element": "mainLayout", "source": "mainLayout.json"}
+    ]
+}

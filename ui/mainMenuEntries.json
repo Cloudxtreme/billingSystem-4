@@ -1,0 +1,20 @@
+
+[{"tag": "Edit",
+  "submenu": [  {"tag": "Companies",  "shortcut": "Ctrl+Alt+C",  "toolTip": "Edit Company DataBase"},
+		{"tag": "Products",   "shortcut": "Ctrl+Alt+P",  "toolTip": "Edit Product details" },
+		{"tag": "Rate List",  "shortcut": "Ctrl+Alt+R",  "toolTip": "Edit Rate List"},
+		{"tag": "taxes", "shortcut": "Ctrl+Alt+T",  "toolTip": "Edit taxes applied"}
+	     ]
+ },
+
+ {"tag": "Invoice",
+  "submenu": [  {"tag": "Sales",      "shortcut": "Ctrl+M",  "toolTip": "Compose a new sales invoice"},
+		{"tag": "Tax",        "shortcut": "Ctrl+N",  "toolTip": "Compose a new tax invoice"}
+	     ]
+ },
+
+ {"tag": "Reports",
+  "submenu": [  {"tag": "Return",  "shortcut": "Ctrl+Alt+Q",  "toolTip": "Edit Company DataBase"}
+	     ]
+ }
+]
