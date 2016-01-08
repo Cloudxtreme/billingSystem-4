@@ -26,6 +26,7 @@ class Window(QMainWindow):
         self.main_menu = self.menuBar()
         self.gui_frame = QWidget()
         self.cmd_frame = None
+
         self.setWindowIcon( QIcon(logo) )
         self.resize( win_width, win_height )
         self.setWindowTitle("Billin Application")
@@ -74,15 +75,32 @@ class Window(QMainWindow):
         save_btn  = QPushButton("&save")
         right_phase.addWidget( reset_btn, 9, 0 )
         right_phase.addWidget( save_btn, 9, 1 )
-
         # make an empty widget set the layout in that widget
         gui_layout.addLayout( left_phase, 0, 0 )
         gui_layout.addLayout( right_phase, 0, 3, 1, 2 )
         self.gui_frame.setLayout( gui_layout )
-        
         # set qwigdet as the centralWidget in the window
         self.setCentralWidget( self.gui_frame )
 
+        #add cmd_frame
+        #make the layout
+        cmd_layout = QHBoxLayout()
+        cmd_line = QLineEdit("$:~ ")
+        print_select = QCheckBox("Print")
+        print_copies = QLineEdit("3")
+        cmd_layout.addWidget(cmd_line)
+        cmd_layout.addWidget( print_select )
+        cmd_layout.addWidget( print_copies )
+        #make an empty widget and add the layout to the widget
+        someWid = QWidget()
+        someWid.setLayout( cmd_layout )
+        #add the widget to the dockWidget
+        some_dockWidget = QDockWidget()
+        some_dockWidget.setWidget( someWid )
+        
+        self.addDockWidget( Qt.BottomDockWidgetArea, some_dockWidget)
+        
+        
 
     def __addMenuEntries__(self, parentObj, dictLst ):
         for dictEle in dictLst:
